@@ -5,7 +5,7 @@ open_button.addEventListener(
     const url = await getCurrentTabUrl();
 
     if (isNotWhatsApp(url)) {
-      // alertUser();
+      alertUser();
       return;
     }
 
@@ -28,3 +28,14 @@ const isNotWhatsApp = (url) => {
 const isWhatsApp = (url) => {
   return url.includes("web.whatsapp.com");
 };
+
+const alertUser = () => {
+  let alert_message = document.getElementById("alert");
+  alert_message.style.display='block';
+};
+
+const close_alert_button = document.getElementById("close-alert");
+close_alert_button.addEventListener("click", () => {
+  let alert_message = document.getElementById("alert");
+  alert_message.style.display='none';
+});
