@@ -11,7 +11,7 @@ open_button.addEventListener(
 
     const phone = document.querySelector("input").value;
 
-    // openWhatsappChat(phone);
+    openWhatsappChat(phone);
   }
 );
 
@@ -32,6 +32,18 @@ const isWhatsApp = (url) => {
 const alertUser = () => {
   let alert_message = document.getElementById("alert");
   alert_message.style.display='block';
+};
+
+const openWhatsappChat = phone => {
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    let message = {
+      action: "openWhatsappChat",
+      phone: phone
+    };
+    myLog(tabs[0].url);
+    chrome.tabs.sendMessage(tabs[0].id, message);
+  });
+
 };
 
 const close_alert_button = document.getElementById("close-alert");
