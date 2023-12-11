@@ -1,27 +1,70 @@
+html {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    cursor: default;
+    background-color: #222e35;
+}
+
 body {
   width: 20rem;
 }
 
-ul {
-  list-style-type: none;
-  padding-inline-start: 0;
-  margin: 1rem 0;
+h1 {
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: rgba(233,237,239,0.88);
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 37.5px;
 }
 
-li {
-  padding: 0.25rem;
-}
-li:nth-child(odd) {
-  background: #80808030;
-}
-li:nth-child(even) {
-  background: #ffffff;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+button {
+  background: rgb(0, 92, 75);
+  color: rgba(233,237,239,0.88);
+  border-radius: 10px;
+  border-bottom: 8px solid var(--text-clr);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 8.5px;
+  margin-right: 1.5px;
+  min-width: calc(30% - 2px);
+  height: 36px;
+  flex-grow: 1;
+  border: 0;
+  padding-left: 9px;
+  padding-right: 7px;
+  padding-bottom: 8px;
+  padding-top: 6px;
+  margin-top: 3px;
+  box-sizing: border-box;
+  border-width: 2px;
 }
 
-h3,
-p {
-  margin: 0;
+button:active {
+  border-bottom: var(--border);
+  transform: translateY(5px);
 }
+
+button:hover {
+  background: #00a884;
+}
+
+
+input {
+  padding-right: 32px;
+  padding-left: 20px;
+  background-color: #343f46;
+  border-radius: 8px;
+  align-items: center;
+  height: 35px;
+  color: rgb(209, 215, 219);
+}
+
 
 /* ALERT */
 .alert {
