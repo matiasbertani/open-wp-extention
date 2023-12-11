@@ -40,7 +40,6 @@ const openWhatsappChat = phone => {
       action: "openWhatsappChat",
       phone: phone
     };
-    myLog(tabs[0].url);
     chrome.tabs.sendMessage(tabs[0].id, message);
   });
 
