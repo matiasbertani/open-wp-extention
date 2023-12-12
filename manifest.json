@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Open WhatsApp Extention",
     "description": "Open quickly any whatsapp phone, even if you don't have it in your contacts.",
-    "version": "0.6.3",
+    "version": "0.6.4",
     "action": {
       "default_popup": "open-whatsapp.html",
       "default_icon": "images/open-whatsapp.png"
